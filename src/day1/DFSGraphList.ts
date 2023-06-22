@@ -1,3 +1,4 @@
+
 function search(graph: WeightedAdjacencyList, needle: number, path: number[], seen: boolean[], curr: number) {
     seen[curr] = true;
     path.push(curr);
