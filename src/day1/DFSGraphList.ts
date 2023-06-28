@@ -9,9 +9,13 @@ function search(graph: WeightedAdjacencyList, needle: number, path: number[], se
     
     let seenCount = 0;
     for (let i = 0; i < graph[curr].length; i++) {
+        if (path[path.length - 1] === needle) {
+            break;
+        }
         const next = graph[curr][i].to;
         if (!seen[next]) {
             search(graph, needle, path, seen, next);
+
         } else {
             seenCount++;
         } 
